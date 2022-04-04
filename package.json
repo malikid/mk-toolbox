@@ -1,6 +1,10 @@
 {
   "name": "mk-toolbox",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.13.x",
+    "yarn": "1.17.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
