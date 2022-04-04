@@ -31,18 +31,25 @@ export default function GetFundaFloorPlan() {
       }
     )
 
-    const {name, fml} = await res.json()
+    const result = await res.json()
 
+    if(res.status !== 200) {
+      alert(result.error)
+      return
+    }
+
+    const {name, fml} = result
     downloadFml(name, fml)
   }
 
   return (
     <>
       <div>
+        <span>Warning: There is no floor plan available for sold properties!</span>
         <form onSubmit={submitUrl}>
-          <label htmlFor="url">Enter the property url</label>
+          <label htmlFor="url">Enter the available / under offer property url</label>
           <input id="url" type="url" required />
-          <button type="submit">Register</button>
+          <button type="submit">Get</button>
         </form>
       </div>
       <div>
