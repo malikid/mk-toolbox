@@ -18,8 +18,6 @@ export default function GetFundaFloorPlan() {
   const submitUrl = async event => {
     event.preventDefault()
 
-    console.log("!!! event.target.url.value", event.target.url.value)
-
     const res = await fetch(
       '/api/funda-fml',
       {
