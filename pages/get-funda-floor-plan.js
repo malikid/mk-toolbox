@@ -45,6 +45,9 @@ export default function GetFundaFloorPlan() {
           <button type="submit">Register</button>
         </form>
       </div>
+      <div>
+        <a href="https:\/\/floorplanner.com">Go to FloorPlanner</a> and import the floor plan!
+      </div>
     </>
   )
 }
