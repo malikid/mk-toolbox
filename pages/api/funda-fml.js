@@ -11,7 +11,10 @@ export default async function handler(req, res) {
 
   try {
     puppeteer.use(StealthPlugin())
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox','--disable-setuid-sandbox']
+    })
     const page = await browser.newPage()
     await page.goto(fundaUrl)
     // await page.screenshot({ path: '/Users/m.h.chang/Desktop/example.png' });
