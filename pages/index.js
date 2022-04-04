@@ -14,7 +14,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to MK's Toolbox!
+          Welcome to MK&apos;s Toolbox!
         </h1>
 
         <p className={styles.description}>
