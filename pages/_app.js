@@ -1,6 +1,8 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import '../styles/globals.css'
 import Script from 'next/script'
+import styles from '../styles/Home.module.css'
+import Image from 'next/image'
 
 function MyApp({ Component, pageProps }) {
   const darkTheme = createTheme({
@@ -26,7 +28,13 @@ function MyApp({ Component, pageProps }) {
           `
         }
       </Script>
-      <Component {...pageProps} />
+      <div className={styles.container}>
+        <Component {...pageProps} />
+        <footer className={styles.footer}>
+          <span>Powered by{' '}</span>
+          <Image src="/favicon.png" alt="Logo" width={72} height={72} />
+        </footer>
+      </div>
     </ThemeProvider>
   )
 }

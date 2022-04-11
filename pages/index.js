@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
 
       <Head>
         <title>MK Toolbox</title>
@@ -51,11 +51,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <span>Powered by{' '}</span>
-          <Image src="/favicon.png" alt="Logo" width={72} height={72} />
-      </footer>
     </div>
   )
 }
