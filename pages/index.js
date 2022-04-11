@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -17,38 +18,13 @@ export default function Home() {
           Welcome to MK&apos;s Toolbox!
         </h1>
 
-        <p className={styles.description}>
-          Get started by
-        </p>
-
         <div className={styles.grid}>
-          <a href="#" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information.</p>
-          </a>
-
-          <a href="#" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about @#$%$^!</p>
-          </a>
-
-          <a
-            href="#"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and ...</p>
-          </a>
-
-          <a
-            href="#"
-            className={styles.card}
-          >
-            <h2>Others &rarr;</h2>
-            <p>
-              ABC.
-            </p>
-          </a>
+          <Link href="/get-funda-floor-plan">
+            <a className={styles.card}>
+              <h2>Get Floor Plan from Funda &rarr;</h2>
+              <p>Find in-depth information.</p>
+            </a>
+          </Link>
         </div>
       </main>
     </div>
